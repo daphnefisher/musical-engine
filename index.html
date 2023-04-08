@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试页面</title>
+    <!-- 以下为openinstall集成代码，建议在html文档中尽量靠前放置，加快初始化过程 -->
+    <!-- 强烈建议直接引用下面的cdn加速链接，以得到最及时的更新，我们将持续跟踪各种主流浏览器的变化，提供最好的服务；不推荐将此js文件下载到自己的服务器-->
+    <script type="text/javascript" charset="UTF-8" src="https://web.cdn.openinstall.io/openinstall.js"></script>
+    <script type="text/javascript">
+        //OpenInstall初始化时将与openinstall服务器交互，应尽可能早的调用
+        var data = OpenInstall.parseUrlParams();
+        new OpenInstall({
+            appKey: "ksbdsf",
+            onready: function () {
+                var m = this, button = document.getElementById("downloadButton");
+                button.onclick = function () {
+                    m.install({ data: { 'channelUrl': 'zbirVPMekOzFpSba1/Y9KqUOBFvm1jOgKinN3wjrQXs=' }, channelCode: "hongYing-channelcode" });
+                    return false;
+                }
+            }
+        }, data);
+    </script>
+    <style>
+        .down {
+            background-color: aqua;
+            width: 80%;
+            height: 60px;
+            border-radius: 30px;
+        }
+
+        .desc {
+            margin-top: 15px;
+            color: grey;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="justify-content: center; align-items: center; display: flex; flex-direction: column; margin-top: 20px;">
+        <input class="down" id="downloadButton" type="button" value="前往下载">
+        <div class="desc">
+            <p>这个是一个简单的测试页面</p>
+    </div>
+</body>
+
+</html>
